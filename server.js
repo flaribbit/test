@@ -59,6 +59,7 @@ wss.on('connection', (ws) => {
 		//console.log(e.toString());
 	});
   
+	
   ws.on('close',function(){
 	  var client;
 	  for(client of wss.clients){
