@@ -1,5 +1,4 @@
 'use strict';
-//常量声明
 const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
@@ -11,7 +10,6 @@ const server = express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 //创建wss服务器
 const wss = new SocketServer({ server });
-//事件
 wss.on('connection', (ws) => {
 	console.log('Client connected');
 	console.log(wss.clients.size+' clients online');
